@@ -1,0 +1,699 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="AONE Agency — Agencia integral de representación deportiva, sponsors, eventos y formación. Conectamos atletas, marcas e instituciones.">
+  <title>AONE Agency</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700&family=Bebas+Neue&family=DM+Mono:ital,wght@0,400;0,500;1,400&family=Funnel+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<!-- ══════════════════════════════════════════════════════════
+     HERO
+══════════════════════════════════════════════════════════ -->
+<section class="hero" id="home">
+  <div class="hero-bg">
+    <img src="brand_assets/Hero-section-BG.png" alt="Aone Agency" draggable="false">
+  </div>
+  <div class="hero-overlay"></div>
+  <div class="hero-grain"></div>
+  <div class="hero-neon-line"></div>
+
+  <nav class="nav">
+    <a href="#home" class="nav-logo">
+      <img src="brand_assets/AONE LOGO.svg" alt="Aone Agency">
+    </a>
+    <ul class="nav-links">
+      <li><a href="#home" class="active">Home</a></li>
+      <li><a href="#areas">Servicios</a></li>
+      <li><a href="#about">AONE</a></li>
+      <li><a href="#talentos">Talentos</a></li>
+      <li><a href="#cta">Contacto</a></li>
+    </ul>
+    <button class="nav-lang" aria-label="Switch language">
+      <span class="nav-lang-active">ES</span>
+      <span class="nav-lang-sep"></span>
+      <span class="nav-lang-other">EN</span>
+    </button>
+    <button class="nav-burger" id="nav-burger" aria-label="Menú" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- Mobile menu dropdown -->
+  <div class="nav-mobile-menu" id="nav-mobile-menu" aria-hidden="true">
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#areas">Servicios</a></li>
+      <li><a href="#about">AONE</a></li>
+      <li><a href="#talentos">Talentos</a></li>
+      <li><a href="#cta">Contacto</a></li>
+    </ul>
+    <div class="nav-mobile-lang">
+      <button class="nav-lang" aria-label="Switch language">
+        <span class="nav-lang-active">ES</span>
+        <span class="nav-lang-sep"></span>
+        <span class="nav-lang-other">EN</span>
+      </button>
+    </div>
+  </div>
+
+  <div class="hero-content">
+    <p class="hero-kicker">Agencia Integral</p>
+    <h1 class="hero-title">
+      <span class="tl"><span>Potenciamos</span></span>
+      <span class="tl"><span>Deportistas e</span></span>
+      <span class="tl"><span>Instituciones</span></span>
+    </h1>
+    <p class="hero-sub">
+      Conectamos atletas, marcas e instituciones, impulsando su crecimiento con representación, acuerdos comerciales y gestión de eventos.
+    </p>
+    <div class="hero-ctas">
+      <a href="#about" class="btn-primary">Nuestros Servicios</a>
+      <a href="#talentos" class="btn-ghost">Ver Talentos</a>
+    </div>
+  </div>
+
+  <div class="hero-scroll" aria-hidden="true">
+    <span class="scroll-chevron"></span>
+    <span class="scroll-chevron"></span>
+    <span class="scroll-chevron"></span>
+  </div>
+
+  <div class="hero-stats">
+    <div class="hero-stat"><span class="hs-num">+22</span><span class="hs-label">Atletas<br>representados</span></div>
+    <div class="hero-stat"><span class="hs-num">5</span><span class="hs-label">Países<br>activos</span></div>
+    <div class="hero-stat"><span class="hs-num">+40</span><span class="hs-label">Acuerdos<br>comerciales</span></div>
+    <div class="hero-stat"><span class="hs-num">7</span><span class="hs-label">Años de<br>experiencia</span></div>
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════════════════════════════
+     MARQUEE STRIP
+══════════════════════════════════════════════════════════ -->
+<div class="marquee-strip" aria-hidden="true">
+  <div class="marquee-track" id="mq-track">
+    <!-- items injected by JS -->
+  </div>
+</div>
+
+
+<!-- ══════════════════════════════════════════════════════════
+     ÁREAS DE NEGOCIO
+══════════════════════════════════════════════════════════ -->
+<section id="areas">
+
+  <!-- EDITORIAL HEADER -->
+  <div class="areas-header">
+    <div class="areas-hdr-rule" id="areas-hdr-rule"></div>
+    <div class="areas-hdr-grid">
+
+      <div>
+        <div class="areas-hdr-label" id="areas-hdr-label">Áreas de Negocio</div>
+        <h2 class="areas-hdr-title">
+          <span class="ahl"><span class="t-white">Gestión</span></span>
+          <span class="ahl"><span class="t-neon">integral</span></span>
+          <span class="ahl"><span class="t-outline">del talento.</span></span>
+        </h2>
+      </div>
+
+      <div class="areas-hdr-right" id="areas-hdr-right">
+        <p class="areas-hdr-desc">Trabajamos con talentos y organizaciones para <b>maximizar su valor</b> y generar nuevas oportunidades.</p>
+        <p class="areas-hdr-desc">Todo gira en torno a una visión 360°: desarrollo deportivo, personal y profesional. Somos el <b>aliado estratégico</b> que asegura que cada atleta trascienda dentro y fuera del campo.</p>
+        <div class="areas-hdr-stats">
+          <div><span class="areas-hdr-stat-n">04</span><span class="areas-hdr-stat-l">Áreas</span></div>
+          <div><span class="areas-hdr-stat-n">360°</span><span class="areas-hdr-stat-l">Visión integral</span></div>
+          <div><span class="areas-hdr-stat-n">+7</span><span class="areas-hdr-stat-l">Años de exp.</span></div>
+        </div>
+      </div>
+
+    </div>
+    <div class="areas-hdr-bottom-rule" id="areas-hdr-bottom-rule"></div>
+  </div>
+
+  <!-- CARDS GRID -->
+  <div class="areas-grid" id="areas-grid">
+
+    <!-- Card 1: Representación Deportiva -->
+    <div class="acard" data-area="0">
+      <div class="acard-inner">
+        <!-- FRONT -->
+        <div class="acard-front">
+          <div class="acard-pattern p1"></div>
+          <div class="acard-num">01</div>
+          <div class="acard-content">
+            <div class="acard-tag">Área principal</div>
+            <h3 class="acard-title">Representación<br>Deportiva</h3>
+            <p class="acard-sub">Negociamos contratos y protegemos los intereses de cada atleta.</p>
+            <div class="acard-hover-hint">Tocar para saber más</div>
+          </div>
+        </div>
+        <!-- BACK -->
+        <div class="acard-back b1">
+          <div class="aback-num">01</div>
+          <div class="aback-inner">
+            <div class="aback-label">Representación Deportiva</div>
+            <div class="aback-stat-row">
+              <div class="aback-stat"><span class="aback-stat-n">22</span><span class="aback-stat-l">Atletas</span></div>
+              <div class="aback-stat"><span class="aback-stat-n">5</span><span class="aback-stat-l">Ligas</span></div>
+              <div class="aback-stat"><span class="aback-stat-n">100%</span><span class="aback-stat-l">Respaldo legal</span></div>
+            </div>
+            <div class="aback-divider"></div>
+            <ul class="aback-list">
+              <li>Negociación y revisión de contratos con respaldo jurídico especializado</li>
+              <li>Monitoreo de condiciones laborales y cumplimiento de pagos</li>
+              <li>Intermediación con clubes, federaciones y selecciones</li>
+              <li>Asesoría permanente durante toda la vigencia del contrato</li>
+            </ul>
+            <div class="aback-trust">
+              <span class="aback-trust-icon">✓</span>
+              Tu jugador estará protegido en cada paso del proceso
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 2: Conexión con Sponsors -->
+    <div class="acard" data-area="1">
+      <div class="acard-inner">
+        <div class="acard-front">
+          <div class="acard-pattern p2"></div>
+          <div class="acard-num">02</div>
+          <div class="acard-content">
+            <div class="acard-tag">Comercial</div>
+            <h3 class="acard-title">Conexión con<br>Sponsors</h3>
+            <p class="acard-sub">Conectamos atletas con marcas que potencian su imagen y carrera.</p>
+            <div class="acard-hover-hint">Tocar para saber más</div>
+          </div>
+        </div>
+        <div class="acard-back b2">
+          <div class="aback-num">02</div>
+          <div class="aback-inner">
+            <div class="aback-label">Conexión con Sponsors</div>
+            <div class="aback-stat-row">
+              <div class="aback-stat"><span class="aback-stat-n">+40</span><span class="aback-stat-l">Acuerdos</span></div>
+              <div class="aback-stat"><span class="aback-stat-n">+50</span><span class="aback-stat-l">Marcas aliadas</span></div>
+              <div class="aback-stat"><span class="aback-stat-n">3</span><span class="aback-stat-l">Continentes</span></div>
+            </div>
+            <div class="aback-divider"></div>
+            <ul class="aback-list">
+              <li>Identificamos marcas alineadas al perfil e imagen del atleta</li>
+              <li>Gestión integral: imagen, publicidad y activaciones comerciales</li>
+              <li>Maximizamos el valor económico fuera de la cancha</li>
+              <li>Red de marcas nacionales e internacionales activas</li>
+            </ul>
+            <div class="aback-trust">
+              <span class="aback-trust-icon">✓</span>
+              Generamos ingresos adicionales sin que el atleta pierda foco
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 3: Organización de Eventos -->
+    <div class="acard" data-area="2">
+      <div class="acard-inner">
+        <div class="acard-front">
+          <div class="acard-pattern p3"></div>
+          <div class="acard-num">03</div>
+          <div class="acard-content">
+            <div class="acard-tag">Eventos</div>
+            <h3 class="acard-title">Organización de<br>Eventos y Acciones</h3>
+            <p class="acard-sub">Creamos escenarios donde los talentos son vistos por quienes importan.</p>
+            <div class="acard-hover-hint">Tocar para saber más</div>
+          </div>
+        </div>
+        <div class="acard-back b3">
+          <div class="aback-num">03</div>
+          <div class="aback-inner">
+            <div class="aback-label">Organización de Eventos</div>
+            <div class="aback-stat-row">
+              <div class="aback-stat"><span class="aback-stat-n">+20</span><span class="aback-stat-l">Eventos</span></div>
+              <div class="aback-stat"><span class="aback-stat-n">5</span><span class="aback-stat-l">Países</span></div>
+              <div class="aback-stat"><span class="aback-stat-n">360°</span><span class="aback-stat-l">Cobertura</span></div>
+            </div>
+            <div class="aback-divider"></div>
+            <ul class="aback-list">
+              <li>Torneos, showcases y lanzamientos con presencia de scouts y clubes</li>
+              <li>Producción integral: logística, comunicación y cobertura mediática</li>
+              <li>Activaciones de marca con impacto real en el mercado</li>
+              <li>Visibilidad estratégica para atletas e instituciones</li>
+            </ul>
+            <div class="aback-trust">
+              <span class="aback-trust-icon">✓</span>
+              Ponemos al jugador frente a las personas que toman decisiones
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 4: Centro de Formación -->
+    <div class="acard" data-area="3">
+      <div class="acard-inner">
+        <div class="acard-front">
+          <div class="acard-pattern p4"></div>
+          <div class="acard-num">04</div>
+          <div class="acard-content">
+            <div class="acard-tag">Formación</div>
+            <h3 class="acard-title">Centro de<br>Formación Deportiva</h3>
+            <p class="acard-sub">Desarrollamos al atleta completo: físico, mental y profesional.</p>
+            <div class="acard-hover-hint">Tocar para saber más</div>
+          </div>
+        </div>
+        <div class="acard-back b4">
+          <div class="aback-num">04</div>
+          <div class="aback-inner">
+            <div class="aback-label">Centro de Formación</div>
+            <div class="aback-stat-row">
+              <div class="aback-stat"><span class="aback-stat-n">Multi</span><span class="aback-stat-l">Disciplina</span></div>
+              <div class="aback-stat"><span class="aback-stat-n">360°</span><span class="aback-stat-l">Desarrollo</span></div>
+              <div class="aback-stat"><span class="aback-stat-n">Cert.</span><span class="aback-stat-l">Profesionales</span></div>
+            </div>
+            <div class="aback-divider"></div>
+            <ul class="aback-list">
+              <li>Entrenamiento físico, táctico, psicológico y nutricional</li>
+              <li>Metodología avalada por profesionales certificados</li>
+              <li>Preparación para competir al más alto nivel internacional</li>
+              <li>Acompañamiento continuo durante toda la carrera deportiva</li>
+            </ul>
+            <div class="aback-trust">
+              <span class="aback-trust-icon">✓</span>
+              Tu jugador crece como atleta y como persona bajo nuestra tutela
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div><!-- /areas-grid -->
+
+</section>
+
+
+<!-- ══════════════════════════════════════════════════════════
+     TALENTOS
+══════════════════════════════════════════════════════════ -->
+<section class="section-talentos" id="talentos">
+  <div class="hdr">
+    <div class="hdr-label" id="t-lbl">Profesionales</div>
+    <h2 class="hdr-title">
+      <span class="hdr-title-line" id="t-line1"></span>
+      <span class="hdr-title-line" id="t-line2"></span>
+    </h2>
+    <div class="hdr-bottom">
+      <p class="hdr-desc" id="t-desc">
+        Representamos a una amplia gama de atletas en distintas disciplinas deportivas,
+        impulsando su crecimiento mediante alianzas estratégicas, patrocinios
+        y un enfoque de desarrollo integral.
+      </p>
+      <div class="hdr-stats" id="t-stats">
+        <div class="stat"><span class="stat-n" data-to="7">0</span><span class="stat-l">Profesionales</span></div>
+
+        <div class="stat"><span class="stat-n" data-to="5">0</span><span class="stat-l">Países</span></div>
+      </div>
+      <div class="track-nav" id="track-nav">
+        <button class="track-nav-btn" id="track-prev" aria-label="Anterior">
+          <svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg>
+        </button>
+        <button class="track-nav-btn" id="track-next" aria-label="Siguiente">
+          <svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div class="neon-rule" id="t-rule"></div>
+
+  <div class="track-wrap">
+    <div class="track" id="track">
+
+      <div class="card" data-idx="0">
+        <div class="card-bg"></div><div class="card-scan"></div>
+        <div class="card-num">01</div>
+        <div class="card-pos">Delantero</div>
+        <div class="card-age">22<em>años</em></div>
+        <div class="card-fig"></div>
+        <div class="card-info">
+          <div class="card-name">Thomas Ortega</div>
+          <div class="card-team">Indep. Rivadavia</div>
+          <div class="card-extra">
+            <div class="card-extra-row"><b>Club:</b> Independiente Rivadavia</div>
+            <div class="card-extra-row"><b>Pos:</b> Delantero · 22 años</div>
+          </div>
+          <div class="card-cta">Ver perfil</div>
+        </div>
+      </div>
+
+      <div class="card" data-idx="1">
+        <div class="card-bg"></div><div class="card-scan"></div>
+        <div class="card-num">02</div>
+        <div class="card-pos">Mediocampista</div>
+        <div class="card-age">20<em>años</em></div>
+        <div class="card-fig"></div>
+        <div class="card-info">
+          <div class="card-name">Tomás Adoryan</div>
+          <div class="card-team">Banfield</div>
+          <div class="card-extra">
+            <div class="card-extra-row"><b>Club:</b> Banfield</div>
+            <div class="card-extra-row"><b>Pos:</b> Mediocampista · 20 años</div>
+          </div>
+          <div class="card-cta">Ver perfil</div>
+        </div>
+      </div>
+
+      <div class="card" data-idx="2">
+        <div class="card-bg"></div><div class="card-scan"></div>
+        <div class="card-num">03</div>
+        <div class="card-pos">Defensor</div>
+        <div class="card-age">19<em>años</em></div>
+        <div class="card-fig"></div>
+        <div class="card-info">
+          <div class="card-name">Franco Berges</div>
+          <div class="card-team">Tristán Suarez</div>
+          <div class="card-extra">
+            <div class="card-extra-row"><b>Club:</b> Tristán Suarez</div>
+            <div class="card-extra-row"><b>Pos:</b> Defensor · 19 años</div>
+          </div>
+          <div class="card-cta">Ver perfil</div>
+        </div>
+      </div>
+
+      <div class="card" data-idx="3">
+        <div class="card-bg"></div><div class="card-scan"></div>
+        <div class="card-num">04</div>
+        <div class="card-pos">Mediocampista</div>
+        <div class="card-age">21<em>años</em></div>
+        <div class="card-fig"></div>
+        <div class="card-info">
+          <div class="card-name">Santiago Ayala</div>
+          <div class="card-team">Osorno</div>
+          <div class="card-extra">
+            <div class="card-extra-row"><b>Club:</b> Osorno</div>
+            <div class="card-extra-row"><b>Pos:</b> Mediocampista · 21 años</div>
+          </div>
+          <div class="card-cta">Ver perfil</div>
+        </div>
+      </div>
+
+      <div class="card" data-idx="4">
+        <div class="card-bg"></div><div class="card-scan"></div>
+        <div class="card-num">05</div>
+        <div class="card-pos">Delantero</div>
+        <div class="card-age">23<em>años</em></div>
+        <div class="card-fig"></div>
+        <div class="card-info">
+          <div class="card-name">Julio Lansade</div>
+          <div class="card-team">Lugo</div>
+          <div class="card-extra">
+            <div class="card-extra-row"><b>Club:</b> Lugo</div>
+            <div class="card-extra-row"><b>Pos:</b> Delantero · 23 años</div>
+          </div>
+          <div class="card-cta">Ver perfil</div>
+        </div>
+      </div>
+
+      <div class="card" data-idx="5">
+        <div class="card-bg"></div><div class="card-scan"></div>
+        <div class="card-num">06</div>
+        <div class="card-pos">Defensor</div>
+        <div class="card-age">18<em>años</em></div>
+        <div class="card-fig"></div>
+        <div class="card-info">
+          <div class="card-name">Jerónimo Álvarez</div>
+          <div class="card-team">Agropecuario</div>
+          <div class="card-extra">
+            <div class="card-extra-row"><b>Club:</b> Agropecuario</div>
+            <div class="card-extra-row"><b>Pos:</b> Defensor · 18 años</div>
+          </div>
+          <div class="card-cta">Ver perfil</div>
+        </div>
+      </div>
+
+      <div class="card" data-idx="6">
+        <div class="card-bg"></div><div class="card-scan"></div>
+        <div class="card-num">07</div>
+        <div class="card-pos">Arquero</div>
+        <div class="card-age">20<em>años</em></div>
+        <div class="card-fig"></div>
+        <div class="card-info">
+          <div class="card-name">Bautista Degregorio</div>
+          <div class="card-team">Estudiantes BA</div>
+          <div class="card-extra">
+            <div class="card-extra-row"><b>Club:</b> Estudiantes BA</div>
+            <div class="card-extra-row"><b>Pos:</b> Arquero · 20 años</div>
+          </div>
+          <div class="card-cta">Ver perfil</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="track-progress">
+    <div class="track-progress-fill" id="track-progress-fill"></div>
+  </div>
+
+  <div class="scroll-hint">
+    <span>Deslizá</span>
+    <div class="hint-arrows"><span></span><span></span><span></span></div>
+  </div>
+
+</section>
+
+
+<!-- ══════════════════════════════════════════════════════════
+     ALIANZAS CON EMPRESAS
+══════════════════════════════════════════════════════════ -->
+<section id="alianzas">
+
+  <div class="al-track" id="al-track">
+
+    <!-- Slide 1: The Messi Experience -->
+    <div class="al-slide" style="
+      background: url('WEBSITE IMAGES/messi-experience.jpg') center/cover no-repeat;">
+      <div class="al-slide-overlay"></div>
+      <div class="al-slide-content">
+        <span class="al-tag">Alianzas con empresas</span>
+        <h2 class="al-title">The Messi<br>Experience</h2>
+        <p class="al-desc">Una experiencia única junto al más grande, para inspirar a la próxima generación de líderes deportivos.</p>
+        <a href="#" class="al-btn">Conocé la experiencia</a>
+      </div>
+      <div class="al-slide-wm">THE MESSI<br>EXPERIENCE</div>
+    </div>
+
+    <!-- Slide 2 -->
+    <div class="al-slide" style="
+      background: url('WEBSITE IMAGES/3x3.jpg') center/cover no-repeat;">
+      <div class="al-slide-overlay"></div>
+      <div class="al-slide-content">
+        <span class="al-tag">Alianzas con empresas</span>
+        <h2 class="al-title">Circuito<br>3x3</h2>
+        <p class="al-desc">Junto a FIBA y CAB, AONE se suma a este nuevo torneo federal que recorrerá el país durante 2025, llevando el básquet 3x3 a cada rincón de Argentina.</p>
+        <a href="#" class="al-btn">Conocé la alianza</a>
+      </div>
+      <div class="al-slide-wm">CIRCUITO<br>3X3</div>
+    </div>
+
+  </div>
+
+  <!-- Navigation arrows -->
+  <button class="al-arrow al-prev" id="al-prev" aria-label="Anterior">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="15 18 9 12 15 6"/></svg>
+  </button>
+  <button class="al-arrow al-next" id="al-next" aria-label="Siguiente">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="9 18 15 12 9 6"/></svg>
+  </button>
+
+  <!-- Dots -->
+  <div class="al-dots" id="al-dots"></div>
+
+  <!-- Progress bar -->
+  <div class="al-progress" id="al-progress"><div class="al-progress-bar" id="al-progress-bar"></div></div>
+
+</section>
+
+
+<!-- ══════════════════════════════════════════════════════════
+     ABOUT
+══════════════════════════════════════════════════════════ -->
+<section id="about">
+  <div class="abt-bg-parallax" id="abt-parallax">
+    <img src="about-section-bg.jpg" alt="" draggable="false">
+  </div>
+  <div class="abt-overlay"></div>
+  <div class="abt-wm">A</div>
+  <div class="abt-spine" id="abt-spine"></div>
+
+  <div class="abt-inner">
+    <div class="abt-label" id="abt-lbl">Sobre Nosotros</div>
+
+    <h2 class="abt-headline" id="abt-hl" aria-label="Construyendo un ecosistema integral donde cada atleta  no solo compite, sino que crece como líder global."></h2>
+
+    <div class="abt-rule" id="abt-rule"></div>
+
+    <div class="abt-cols">
+      <div>
+        <p class="abt-body-p" id="abt-p1">
+          <b>Aone Agency</b> es una empresa <b>disruptiva</b> que se ha posicionado como un <b>referente</b> por su capacidad única para combinar la <b>representación deportiva</b> con la <b>organización de eventos relevantes</b> y activaciones comerciales de alto impacto. Nos distingue un enfoque <b>innovador</b> y un firme compromiso con la excelencia, ofreciendo <b>soluciones personalizadas</b> que se adaptan a las necesidades específicas de cada área.
+        </p>
+        <p class="abt-body-p" id="abt-p2">
+          Nuestro equipo <b>pluridisciplinario</b> está compuesto por agentes deportivos, empresarios, asesores financieros, periodistas y abogados. Esta diversidad de perfiles nos permite abordar distintas unidades de negocio con una visión <b>integral y estratégica</b>.
+        </p>
+      </div>
+      <div class="abt-acc" id="abt-acc">
+        <div class="acc-item" id="ai-1">
+          <button class="acc-btn" onclick="toggleAcc('ai-1')" aria-expanded="false">
+            <span class="acc-title">Nuestra Misión</span>
+            <span class="acc-icon" aria-hidden="true"></span>
+          </button>
+          <div class="acc-body"><div class="acc-body-inner">
+            <p class="acc-text">Inspirar, desarrollar y posicionar atletas con visión global, brindando las herramientas y conexiones necesarias para liderar dentro y fuera del deporte.</p>
+          </div></div>
+        </div>
+        <div class="acc-item" id="ai-2">
+          <button class="acc-btn" onclick="toggleAcc('ai-2')" aria-expanded="false">
+            <span class="acc-title">Más que Representación</span>
+            <span class="acc-icon" aria-hidden="true"></span>
+          </button>
+          <div class="acc-body"><div class="acc-body-inner">
+            <p class="acc-text">Creemos que el talento no solo se construye en la cancha, sino también en la mentalidad, la estrategia y la proyección global. Para ello ofrecemos un espacio donde el desarrollo deportivo, personal y profesional se fusionan.</p>
+          </div></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="abt-pillars" id="abt-pillars">
+      <div class="pillar" id="ap1">
+        <div class="pillar-bar"></div>
+        <span class="pillar-num">01</span>
+        <div class="pillar-name">Desarrollo<br>Deportivo</div>
+        <div class="pillar-sub">Formación integral</div>
+      </div>
+      <div class="pillar" id="ap2">
+        <div class="pillar-bar"></div>
+        <span class="pillar-num">02</span>
+        <div class="pillar-name">Crecimiento<br>Personal</div>
+        <div class="pillar-sub">Mentalidad de élite</div>
+      </div>
+      <div class="pillar" id="ap3">
+        <div class="pillar-bar"></div>
+        <span class="pillar-num">03</span>
+        <div class="pillar-name">Proyección<br>Internacional</div>
+        <div class="pillar-sub">Visión global</div>
+      </div>
+    </div>
+  </div>
+
+</section>
+
+
+<!-- ══════════════════════════════════════════════════════════
+     CTA
+══════════════════════════════════════════════════════════ -->
+<section id="cta">
+  <div class="cta-bg-img">
+    <img src="WEBSITE IMAGES/CTA-FONDO.jpg" alt="" aria-hidden="true">
+  </div>
+  <div class="cta-overlay"></div>
+  <div class="cta-inner" id="cta-inner">
+    <h2 class="cta-title">
+      Formá parte del ecosistema<br>
+      que <em>transforma el deporte</em>
+    </h2>
+    <p class="cta-body">Atletas, marcas, sponsors y visionarios del deporte: en AONE creamos conexiones que cambian carreras.</p>
+    <p class="cta-question">¿Estás listo para el siguiente paso?</p>
+    <a href="mailto:admin@agencyaone.com" class="cta-btn">Contactanos</a>
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════════════════════════════
+     FOOTER
+══════════════════════════════════════════════════════════ -->
+<footer id="footer">
+
+  <div class="footer-top">
+
+    <!-- Left: contact -->
+    <div class="footer-col">
+      <p class="footer-col-title">Contactanos</p>
+      <a href="mailto:admin@agencyaone.com" class="footer-contact-row">
+        <span class="footer-icon">
+          <svg viewBox="0 0 24 24" stroke-width="1.6"><rect x="2" y="4" width="20" height="16" rx="2"/><polyline points="2,4 12,13 22,4"/></svg>
+        </span>
+        admin@agencyaone.com
+      </a>
+    </div>
+
+    <!-- Right: social -->
+    <div class="footer-col" style="text-align:right;">
+      <p class="footer-col-title">Seguinos</p>
+      <a href="https://instagram.com/agency_aone" target="_blank" rel="noopener" class="footer-contact-row" style="justify-content:flex-end;">
+        agency_aone
+        <span class="footer-icon">
+          <svg viewBox="0 0 24 24" stroke-width="1.6"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+        </span>
+      </a>
+    </div>
+
+  </div>
+
+  <hr class="footer-divider">
+  <p class="footer-copy">© 2026 All rights reserved — Aone Agency</p>
+
+  <div class="footer-wordmark">
+    <img src="brand_assets/AONE LOGO.svg" alt="Aone" style="max-width:280px;opacity:.06;margin:40px auto 0;display:block;">
+  </div>
+
+</footer>
+
+
+<!-- ══════════════════════════════════════════════════════════
+     MODAL
+══════════════════════════════════════════════════════════ -->
+<div class="modal-overlay" id="modal-overlay" role="dialog" aria-modal="true">
+  <div class="modal" id="modal">
+    <button class="modal-close" id="modal-close" aria-label="Cerrar">✕</button>
+    <div class="modal-left">
+      <div class="modal-left-bg" id="modal-left-bg"></div>
+      <div class="modal-num-bg" id="modal-num-bg"></div>
+      <div class="modal-glow"></div>
+      <div class="modal-fig" id="modal-fig"></div>
+      <div class="modal-nav">
+        <button class="modal-nav-btn" id="modal-prev">←</button>
+        <span class="modal-nav-counter"><span id="modal-cur">1</span> / <span id="modal-total">7</span></span>
+        <button class="modal-nav-btn" id="modal-next">→</button>
+      </div>
+    </div>
+    <div class="modal-right" id="modal-right">
+      <div class="modal-row">
+        <div class="modal-label-sm">Profesional · Agencia</div>
+        <div class="modal-name" id="m-name"></div>
+        <div class="modal-club" id="m-club"></div>
+      </div>
+      <div class="modal-row"><div class="modal-tags" id="m-tags"></div></div>
+      <div class="modal-row"><div class="modal-divider neon"></div></div>
+      <div class="modal-row"><div class="modal-attrs" id="m-attrs"></div></div>
+      <div class="modal-row">
+        <div class="modal-label-sm">Temporada actual</div>
+        <div class="modal-stats" id="m-stats"></div>
+      </div>
+      <div class="modal-row"><div class="modal-divider"></div></div>
+      <div class="modal-row"><p class="modal-bio" id="m-bio"></p></div>
+      <div class="modal-row"><a href="#" class="modal-cta">Contactar Agencia</a></div>
+    </div>
+  </div>
+</div>
+
+
+</body>
+<script src="js/main.js"></script>
+</html>
