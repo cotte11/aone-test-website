@@ -299,7 +299,7 @@
       display: flex;
       flex-direction: column;
       justify-content: center;
-      padding: 120px 20px 120px;
+      padding: 120px 56px 120px;
     }
 
     .hero-kicker {
@@ -2435,4 +2435,30 @@
       .modal-stat-n { font-size: 26px; }
       .modal-name { font-size: clamp(28px, 8vw, 40px); }
       .modal-close { top: 12px; right: 12px; }
+    }
+
+    /* ── TOUCH DEVICES: replace 3D flip with fade ── */
+    @media (hover: none) {
+      .acard-inner {
+        transform-style: flat;
+        -webkit-transform-style: flat;
+      }
+      .acard:hover .acard-inner,
+      .acard.flipped .acard-inner {
+        transform: none;
+      }
+      .acard-back {
+        transform: none;
+        opacity: 0;
+        transition: opacity .35s ease;
+      }
+      .acard-front {
+        transition: opacity .35s ease;
+      }
+      .acard.flipped .acard-front {
+        opacity: 0;
+      }
+      .acard.flipped .acard-back {
+        opacity: 1;
+      }
     }
