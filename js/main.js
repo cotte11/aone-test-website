@@ -4,13 +4,11 @@
 const PHOTO_BASE = null; // photos loaded individually below
 
 const PLAYERS = [
-  { num:'01', name:'Thomas Ortega',      team:'Independiente Rivadavia', age:22, pos:'Delantero',      nat:'Argentina', height:'1.80 m', foot:'Derecho',    liga:'Primera Nacional',         pj:18, goles:7,  ast:3, bio:'Delantero explosivo con gran capacidad de definición en área. Se incorporó a la primera de Independiente Rivadavia a los 20 años, consolidándose como una de las promesas más destacadas del ascenso argentino.', bg:'radial-gradient(ellipse at 40% 30%, #1a2e1a, #080808)', photo:'WEBSITE IMAGES/PLAYERS/Thomas Ortega - Independiente Rivadavia.jpeg' },
-  { num:'02', name:'Tomás Adoryan',       team:'Banfield',                age:20, pos:'Mediocampista', nat:'Argentina', height:'1.76 m', foot:'Izquierdo',  liga:'Primera División',          pj:14, goles:2,  ast:6, bio:'Mediocampista creativo con visión de juego y gran técnica individual. Titular indiscutido en Banfield, con capacidad para asociarse en espacios reducidos y llegar al gol desde segunda línea.', bg:'radial-gradient(ellipse at 40% 30%, #181828, #080808)', photo:'WEBSITE IMAGES/PLAYERS/Tomas Adoryan - Banfield.jpeg' },
-  { num:'03', name:'Franco Berges',       team:'Tristán Suarez',          age:19, pos:'Defensor',       nat:'Argentina', height:'1.84 m', foot:'Derecho',    liga:'Primera B Metropolitana',  pj:21, goles:1,  ast:2, bio:'Defensor central con gran dominio aéreo y personalidad para salir jugando desde el fondo. A sus 19 años ya acumula más de 20 partidos en el ascenso.', bg:'radial-gradient(ellipse at 40% 30%, #281818, #080808)', photo:'WEBSITE IMAGES/PLAYERS/Franco Berges - Tristan Suarez.jpeg' },
-  { num:'04', name:'Santiago Ayala',      team:'Osorno',                  age:21, pos:'Mediocampista', nat:'Chile',     height:'1.73 m', foot:'Derecho',    liga:'Primera B — Chile',         pj:16, goles:3,  ast:4, bio:'Mediocampista de gran dinamismo y recorrido. Representante chileno del plantel, Ayala llegó a Osorno con el objetivo de proyectarse al fútbol internacional.', bg:'radial-gradient(ellipse at 40% 30%, #152020, #080808)', photo:'WEBSITE IMAGES/PLAYERS/Santiago Ayala - Osorno.jpeg' },
-  { num:'05', name:'Julio Lansade',       team:'Lugo',                    age:23, pos:'Delantero',      nat:'Argentina', height:'1.78 m', foot:'Derecho',    liga:'Segunda División — España', pj:12, goles:4,  ast:1, bio:'Delantero con experiencia internacional en la segunda división española. Lansade es el jugador con más jerarquía del plantel, habiendo dado el salto a Europa a los 21 años.', bg:'radial-gradient(ellipse at 40% 30%, #201e10, #080808)', photo:'WEBSITE IMAGES/PLAYERS/Julio Lansade - Lugo.jpeg' },
-  { num:'06', name:'Jerónimo Álvarez',    team:'Agropecuario',            age:18, pos:'Defensor',       nat:'Argentina', height:'1.82 m', foot:'Zurdo',      liga:'Primera Nacional',          pj:9,  goles:0,  ast:1, bio:'El jugador más joven del plantel. Defensor zurdo con una lectura del juego inusual para su edad, debutó en Primera Nacional a los 17 años.', bg:'radial-gradient(ellipse at 40% 30%, #121c12, #080808)', photo:'WEBSITE IMAGES/PLAYERS/Jerónimo Álvarez- Agropecuario.jpeg' },
-  { num:'07', name:'Bautista Degregorio', team:'Estudiantes BA',          age:20, pos:'Arquero',        nat:'Argentina', height:'1.88 m', foot:'Derecho',    liga:'Primera B Metropolitana',  pj:20, goles:0,  ast:0, bio:'Arquero de gran envergadura y reflejos. Con 1.88 m y una presencia dominante bajo los tres palos, Degregorio se perfila como uno de los porteros más prometedores de su generación.', bg:'radial-gradient(ellipse at 40% 30%, #181020, #080808)', photo:'WEBSITE IMAGES/PLAYERS/Bautista Degregorio - Estudiantes BA.jpeg' },
+  { num:'01', name:'Thomas Ortega',       team:'Quilmes',          age:22, pos:'Delantero',      nat:'Argentina', height:'1.80 m', foot:'Derecho',   liga:'Primera Nacional',        pj:18, goles:7, ast:3, bio:'Delantero explosivo con gran capacidad de definición en área. Se incorporó a la primera de Independiente Rivadavia a los 20 años, consolidándose como una de las promesas más destacadas del ascenso argentino.', bg:'radial-gradient(ellipse at 40% 30%, #1a2e1a, #080808)', photo:'WEBSITE IMAGES/Fotos A One/Thomas Ortega - Quilmes.jpeg' },
+  { num:'02', name:'Tomás Adoryan',        team:'Banfield',         age:20, pos:'Mediocampista',  nat:'Argentina', height:'1.76 m', foot:'Izquierdo', liga:'Primera División',         pj:14, goles:2, ast:6, bio:'Mediocampista creativo con visión de juego y gran técnica individual. Titular indiscutido en Banfield, con capacidad para asociarse en espacios reducidos y llegar al gol desde segunda línea.', bg:'radial-gradient(ellipse at 40% 30%, #181828, #080808)', photo:'WEBSITE IMAGES/Fotos A One/Tomás Adoryan - Banfield.jpeg' },
+  { num:'03', name:'Franco Bergés',        team:'Güemes',           age:19, pos:'Defensor',       nat:'Argentina', height:'1.84 m', foot:'Derecho',   liga:'Primera B Metropolitana', pj:21, goles:1, ast:2, bio:'Defensor central con gran dominio aéreo y personalidad para salir jugando desde el fondo. A sus 19 años ya acumula más de 20 partidos en el ascenso.', bg:'radial-gradient(ellipse at 40% 30%, #281818, #080808)', photo:'WEBSITE IMAGES/Fotos A One/Franco Bergés - Guemes.jpeg' },
+  { num:'04', name:'Román Suárez',         team:'Alianza Sullana',  age:22, pos:'Mediocampista',  nat:'Argentina', height:'1.75 m', foot:'Derecho',   liga:'Liga 1 — Perú',           pj:15, goles:2, ast:3, bio:'Mediocampista con proyección internacional que decidió dar el salto al fútbol peruano de la mano de AONE.', bg:'radial-gradient(ellipse at 40% 30%, #152020, #080808)', photo:'WEBSITE IMAGES/Fotos A One/Román Suárez - Alianza Sullana.jpeg' },
+  { num:'05', name:'Bautista Degregorio',  team:'C.A. Estudiantes', age:20, pos:'Arquero',        nat:'Argentina', height:'1.88 m', foot:'Derecho',   liga:'Primera B Metropolitana', pj:20, goles:0, ast:0, bio:'Arquero de gran envergadura y reflejos. Con 1.88 m y una presencia dominante bajo los tres palos, Degregorio se perfila como uno de los porteros más prometedores de su generación.', bg:'radial-gradient(ellipse at 40% 30%, #181020, #080808)', photo:'WEBSITE IMAGES/Fotos A One/Bautista Degregorio - Club Atlético Estudiantes.jpeg' },
 ];
 
 /* ══════════════════════════════════════════════════════════
@@ -52,12 +50,12 @@ document.querySelectorAll('.card').forEach((card, i) => {
 /* ══════════════════════════════════════════════════════════
    TALENTOS — TITLE BUILD
 ══════════════════════════════════════════════════════════ */
-const T_WORDS = ['NUESTROS', 'TALENTOS'];
+const T_WORDS = ['ALGUNOS DE', 'NUESTROS TALENTOS'];
 ['t-line1','t-line2'].forEach((id, wi) => {
   const el = document.getElementById(id);
   T_WORDS[wi].split('').forEach((ch, li) => {
     const s = document.createElement('span');
-    s.textContent = ch;
+    s.textContent = ch === ' ' ? '\u00A0' : ch;
     s.style.transitionDelay = `${(wi * T_WORDS[0].length + li) * 32}ms`;
     el.appendChild(s);
   });
@@ -129,7 +127,7 @@ new IntersectionObserver(entries => {
   d(() => document.getElementById('t-bbar').classList.add('on'), 780);
   d(() => document.getElementById('track-nav').classList.add('on'), 500);
   d(() => {
-    document.querySelectorAll('.stat-n').forEach(el => counter(el, +el.dataset.to));
+    document.querySelectorAll('.stat-n[data-to]').forEach(el => counter(el, +el.dataset.to));
   }, 460);
 }, { threshold: 0.08 }).observe(document.getElementById('talentos'));
 
@@ -243,12 +241,13 @@ function navigate(dir) {
   }, 200);
 }
 
-allCards.forEach(card => {
-  card.addEventListener('click', () => {
-    if (didDrag) return;
-    openModal(+card.dataset.idx);
-  });
-});
+// Modal deshabilitado temporalmente — sin estadísticas disponibles
+// allCards.forEach(card => {
+//   card.addEventListener('click', () => {
+//     if (didDrag) return;
+//     openModal(+card.dataset.idx);
+//   });
+// });
 
 document.getElementById('modal-close').addEventListener('click', closeModal);
 overlay.addEventListener('click', e => { if (e.target === overlay) closeModal(); });

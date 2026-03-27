@@ -2011,17 +2011,17 @@
     .p1 {
       background:
         linear-gradient(to top, rgba(6,6,6,.95) 0%, rgba(6,6,6,.6) 45%, rgba(6,6,6,.25) 100%),
-        url('../WEBSITE IMAGES/representacion deportiva.png') center/cover;
+        url('../WEBSITE IMAGES/Fotos A One/representacion deportiva.jpg') center/cover;
     }
     .p2 {
       background:
         linear-gradient(to top, rgba(6,6,6,.95) 0%, rgba(6,6,6,.6) 45%, rgba(6,6,6,.25) 100%),
-        url('../WEBSITE IMAGES/sponsors.jpg') center/cover;
+        url('../WEBSITE IMAGES/Fotos A One/Conexion con sponsors.jpeg') center/cover;
     }
     .p3 {
       background:
         linear-gradient(to top, rgba(6,6,6,.95) 0%, rgba(6,6,6,.6) 45%, rgba(6,6,6,.25) 100%),
-        url('../WEBSITE IMAGES/org de eventos.png') center/cover;
+        url('../WEBSITE IMAGES/Fotos A One/Organización de eventos.jpg') center/cover;
     }
     .p4 {
       background:
@@ -2369,8 +2369,11 @@
         align-items: flex-start;
         gap: 32px;
       }
-      .hdr-desc { max-width: 100%; }
+      .hdr-desc { max-width: 100%; text-align: left; }
       .hdr-stats { gap: 20px; }
+      .hdr-label { text-align: left; }
+      .stat { text-align: left; }
+      .stat-n { text-align: left; }
       .track-wrap { padding: 0 20px; }
       .track { gap: 10px; }
       .card { flex: 0 0 220px; height: 340px; }
