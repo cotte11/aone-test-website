@@ -50,8 +50,8 @@ document.querySelectorAll('.card').forEach((card, i) => {
 /* ══════════════════════════════════════════════════════════
    TALENTOS — TITLE BUILD
 ══════════════════════════════════════════════════════════ */
-const T_WORDS = ['ALGUNOS DE', 'NUESTROS TALENTOS'];
-['t-line1','t-line2'].forEach((id, wi) => {
+const T_WORDS = ['ALGUNOS DE', 'NUESTROS', 'TALENTOS'];
+['t-line1','t-line2','t-line3'].forEach((id, wi) => {
   const el = document.getElementById(id);
   T_WORDS[wi].split('').forEach((ch, li) => {
     const s = document.createElement('span');
@@ -117,7 +117,7 @@ new IntersectionObserver(entries => {
   if (!entries[0].isIntersecting || talFired) return;
   talFired = true;
   d(() => document.getElementById('t-lbl').classList.add('on'), 80);
-  d(() => document.querySelectorAll('#t-line1 span, #t-line2 span').forEach(s => s.classList.add('on')), 200);
+  d(() => document.querySelectorAll('#t-line1 span, #t-line2 span, #t-line3 span').forEach(s => s.classList.add('on')), 200);
   d(() => document.getElementById('t-desc').classList.add('on'), 360);
   d(() => document.getElementById('t-stats').classList.add('on'), 420);
   d(() => document.getElementById('t-rule').classList.add('on'), 500);
