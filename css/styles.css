@@ -1641,6 +1641,13 @@
       margin-bottom: 24px;
     }
 
+    .al-cs-content .al-tag {
+      font-size: clamp(18px, 2vw, 26px);
+      font-style: normal;
+      letter-spacing: .18em;
+      margin-bottom: 28px;
+    }
+
     .al-cs-desc {
       font-size: 15px;
       font-weight: 300;
@@ -2693,6 +2700,7 @@
         opacity: 1;
         transform: none;
       }
+      .al-cs-content .al-btn { align-self: center; }
       .al-cs-title { font-size: 56px; }
       .al-cs-location { font-size: 20px; }
       .al-cs-desc { font-size: 15px; max-width: 100%; }
