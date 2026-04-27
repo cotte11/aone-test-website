@@ -2706,8 +2706,9 @@
       .al-prev { left: 16px; }
       .al-next { right: 16px; }
       .al-dots { left: 50%; transform: translateX(-50%); bottom: 28px; }
-      .hero-exp-cards { width: 240px; }
-      .hero-exp-card { width: 240px; height: 148px; }
+      .hero-exp-cards { width: 100%; }
+      .hero-exp-card { flex: 0 0 calc(50% - 5px); width: calc(50% - 5px); height: 130px; }
+      #hero-exp-dots .hero-exp-dot:nth-child(3) { display: none; }
 
       /* ABOUT */
       .abt-spine { display: none; }
