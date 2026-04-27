@@ -425,8 +425,8 @@ new IntersectionObserver(entries => {
     touchX = null;
   });
 
-  // ── Pause on hover ───────────────────────────────────────
-  const section = document.getElementById('alianzas');
+  // ── Pause on hover (scoped to carousel only) ─────────────
+  const section = document.getElementById('al-carousel');
   section.addEventListener('mouseenter', () => {
     clearTimeout(timer);
     cancelAnimationFrame(barAnim);
@@ -441,6 +441,41 @@ new IntersectionObserver(entries => {
   slides[0].classList.add('active');
   resetBar();
   startTimer();
+})();
+
+/* ══════════════════════════════════════════════════════════
+   HERO THUMBNAILS — MINI CAROUSEL (2 visible of 3)
+══════════════════════════════════════════════════════════ */
+(function() {
+  const expTrack = document.getElementById('hero-exp-track');
+  const dots     = document.querySelectorAll('#hero-exp-dots .hero-exp-dot');
+  if (!expTrack || !dots.length) return;
+
+  let activePage = 0;
+
+  function goTo(page) {
+    activePage = page;
+    const card   = expTrack.querySelector('.hero-exp-card');
+    const cardW  = card ? card.offsetWidth + 10 : 250;
+    expTrack.style.transform = `translateX(-${page * cardW}px)`;
+    dots.forEach((d, i) => d.classList.toggle('active', i === page));
+  }
+
+  dots.forEach((dot, i) => dot.addEventListener('click', () => goTo(i)));
+})();
+
+/* ══════════════════════════════════════════════════════════
+   ALIANZAS — COMING SOON SCROLL ANIMATION
+══════════════════════════════════════════════════════════ */
+(function() {
+  const csContent = document.getElementById('al-cs-content');
+  if (!csContent) return;
+  let fired = false;
+  new IntersectionObserver(entries => {
+    if (!entries[0].isIntersecting || fired) return;
+    fired = true;
+    csContent.classList.add('on');
+  }, { threshold: 0.12 }).observe(csContent);
 })();
 
 /* ══════════════════════════════════════════════════════════

@@ -395,7 +395,8 @@
     /* SCROLL INDICATOR */
     .hero-scroll {
       position: absolute;
-      right: 52px; bottom: 88px;
+      left: 50%; bottom: 88px;
+      transform: translateX(-50%);
       z-index: 5;
       display: flex;
       flex-direction: column;
@@ -460,6 +461,166 @@
       text-transform: uppercase;
       color: rgba(255,255,255,.3);
       line-height: 1.5;
+    }
+
+
+    /* EXPERIENCE THUMBNAILS */
+    .hero-exp {
+      /* On desktop: escape hero-content's bounds and anchor to hero's bottom-right.
+         calc(-44vw + 56px) offsets rightward past the 56%-wide hero-content,
+         leaving exactly 56px from the viewport right edge. */
+      position: absolute;
+      right: calc(-44vw + 56px);
+      bottom: 90px;
+      z-index: 5;
+      opacity: 0;
+      animation: fadeUp .6s 1.4s ease forwards;
+    }
+
+    .hero-exp-label {
+      font-family: 'DM Mono', monospace;
+      font-size: 9px;
+      letter-spacing: .22em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,.35);
+      margin-bottom: 10px;
+      padding-left: 2px;
+    }
+
+    .hero-exp-cards {
+      overflow: hidden;
+      width: 240px; /* one card at a time */
+    }
+
+    .hero-exp-track {
+      display: flex;
+      gap: 10px;
+      transition: transform .5s cubic-bezier(.22,.68,0,1.2);
+    }
+
+    .hero-exp-dots {
+      display: flex;
+      gap: 6px;
+      margin-top: 10px;
+      padding-left: 2px;
+    }
+
+    .hero-exp-dot {
+      width: 20px;
+      height: 3px;
+      background: rgba(255,255,255,.2);
+      border: none;
+      padding: 0;
+      cursor: pointer;
+      flex-shrink: 0;
+      transition: background .2s, width .3s cubic-bezier(.22,.68,0,1.2);
+    }
+
+    .hero-exp-dot.active {
+      background: var(--neon);
+      width: 32px;
+    }
+
+    .hero-exp-card--soon {
+      border-color: rgba(170,255,0,.3);
+    }
+
+    .hero-exp-card--soon .hero-exp-card-overlay {
+      background: linear-gradient(
+        to top,
+        rgba(6,6,6,.97) 0%,
+        rgba(6,6,6,.80) 50%,
+        rgba(6,6,6,.55) 100%
+      );
+    }
+
+    .hero-exp-card--soon .hero-exp-card-tag {
+      color: var(--black);
+      background: var(--neon);
+      padding: 2px 6px;
+      font-size: 7.5px;
+      letter-spacing: .14em;
+    }
+
+    .hero-exp-card {
+      position: relative;
+      width: 240px;
+      height: 152px;
+      background-size: cover;
+      background-position: center;
+      text-decoration: none;
+      overflow: hidden;
+      display: block;
+      border: 1px solid rgba(255,255,255,.1);
+      transition: border-color .25s, transform .25s;
+      flex-shrink: 0;
+    }
+    .hero-exp-card:hover {
+      border-color: var(--neon);
+      transform: translateY(-3px);
+    }
+    .hero-exp-card:hover .hero-exp-card-arrow {
+      opacity: 1;
+      transform: translate(0, 0);
+    }
+    .hero-exp-card:hover .hero-exp-card-overlay {
+      background: linear-gradient(
+        to top,
+        rgba(6,6,6,.90) 0%,
+        rgba(6,6,6,.50) 55%,
+        rgba(6,6,6,.18) 100%
+      );
+    }
+
+    .hero-exp-card-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(
+        to top,
+        rgba(6,6,6,.85) 0%,
+        rgba(6,6,6,.40) 55%,
+        rgba(6,6,6,.08) 100%
+      );
+      transition: background .25s;
+    }
+
+    .hero-exp-card-body {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      padding: 11px 12px;
+    }
+
+    .hero-exp-card-tag {
+      font-family: 'DM Mono', monospace;
+      font-size: 8.5px;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+      color: var(--neon);
+      margin-bottom: 3px;
+      display: block;
+    }
+
+    .hero-exp-card-name {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 17px;
+      line-height: 1.05;
+      letter-spacing: .02em;
+      color: var(--white);
+      display: block;
+    }
+
+    .hero-exp-card-arrow {
+      position: absolute;
+      top: 10px;
+      right: 12px;
+      font-size: 14px;
+      color: var(--neon);
+      opacity: 0;
+      transform: translate(-4px, 4px);
+      transition: opacity .2s, transform .2s;
     }
 
 
@@ -1404,6 +1565,123 @@
     ═══════════════════════════════════════════════════════ */
     #alianzas {
       position: relative;
+      background: #060606;
+    }
+
+    /* ── Coming Soon block ── */
+    .al-cs {
+      display: grid;
+      grid-template-columns: 52% 48%;
+      min-height: 100vh;
+      background: #060606;
+      overflow: hidden;
+    }
+
+    /* LEFT — visual */
+    .al-cs-visual {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 80px 48px 80px 80px;
+      overflow: hidden;
+    }
+
+    .al-cs-visual::after {
+      /* right-side fade to blend into the text column */
+      content: '';
+      position: absolute;
+      top: 0; right: 0; bottom: 0;
+      width: 140px;
+      background: linear-gradient(to right, transparent, #060606);
+      pointer-events: none;
+    }
+
+    .al-cs-visual img {
+      position: relative;
+      z-index: 1;
+      width: 100%;
+      max-width: 540px;
+      height: auto;
+      object-fit: contain;
+      display: block;
+      mix-blend-mode: screen; /* makes white bg invisible on dark */
+    }
+
+    /* RIGHT — text */
+    .al-cs-content {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 80px 80px 80px 0;
+      opacity: 0;
+      transform: translateX(28px);
+      transition: opacity .75s ease, transform .75s ease;
+    }
+
+    .al-cs-content.on {
+      opacity: 1;
+      transform: none;
+    }
+
+    .al-cs-title {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: clamp(52px, 6.5vw, 96px);
+      line-height: .9;
+      letter-spacing: .01em;
+      color: var(--white);
+      margin: 10px 0 16px;
+    }
+
+    .al-cs-location {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: clamp(20px, 2.2vw, 30px);
+      letter-spacing: .14em;
+      color: var(--neon);
+      margin-bottom: 24px;
+    }
+
+    .al-cs-desc {
+      font-size: 15px;
+      font-weight: 300;
+      line-height: 1.68;
+      color: rgba(255,255,255,.6);
+      max-width: 380px;
+      margin-bottom: 36px;
+    }
+
+    .al-cs-content .al-btn {
+      align-self: flex-start;
+    }
+
+    /* ── Divider ── */
+    .al-exp-hdr {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      padding: 24px 80px;
+      background: #060606;
+      border-top: 1px solid rgba(255,255,255,.05);
+    }
+
+    .al-exp-hdr-rule {
+      flex: 1;
+      height: 1px;
+      background: rgba(255,255,255,.08);
+    }
+
+    .al-exp-hdr-label {
+      font-family: 'DM Mono', monospace;
+      font-size: 9.5px;
+      letter-spacing: .24em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,.28);
+      white-space: nowrap;
+    }
+
+    /* ── Carousel wrapper ── */
+    .al-carousel {
+      position: relative;
       height: 100vh;
       min-height: 560px;
       overflow: hidden;
@@ -2250,6 +2528,9 @@
       /* HERO */
       .hero-inner { padding: 0 36px; }
       .hero-stats { padding: 0 36px 24px; gap: 24px; }
+      .hero-exp-cards { width: 200px; }
+      .hero-exp-card { width: 200px; height: 128px; }
+      .hero-exp-card-name { font-size: 15px; }
 
       /* ABOUT */
       .abt-inner { padding: 0 36px 0 56px; }
@@ -2267,6 +2548,10 @@
 
       /* ALIANZAS */
       .al-slide-content { padding: 0 56px; }
+      .al-cs-visual { padding: 60px 32px 60px 36px; }
+      .al-cs-content { padding: 60px 36px 60px 0; }
+      .al-exp-hdr { padding: 20px 56px; }
+      .hero-exp-cards { width: 306px; } /* 2 × 148 + 10 */
 
       /* CTA */
       .cta-inner { padding: 80px 56px; }
@@ -2325,7 +2610,7 @@
         padding-left: 20px;
         padding-right: 20px;
         padding-top: 0;
-        padding-bottom: 80px;
+        padding-bottom: 28px;
       }
       .hero-inner {
         padding: 0 20px;
@@ -2349,6 +2634,16 @@
       .btn-ghost { padding: 10px 0; font-size: 13px; }
       .hero-right-deco { display: none; }
       .hero-stats { display: none; }
+      .hero-scroll { display: none; }
+      .hero-exp {
+        position: static;
+        opacity: 1;
+        animation: none;
+        margin-top: 24px;
+      }
+      .hero-exp-cards { gap: 8px; }
+      .hero-exp-card { flex: 1; width: auto; height: 96px; }
+      .hero-exp-card-name { font-size: 14px; }
 
       /* AREAS */
       .areas-hdr-grid { grid-template-columns: 1fr; gap: 28px 0; }
@@ -2380,6 +2675,28 @@
 
       /* ALIANZAS */
       #alianzas { padding: 0; }
+      .al-cs {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto;
+        min-height: auto;
+      }
+      .al-cs-visual {
+        padding: 60px 24px 32px;
+        justify-content: center;
+      }
+      .al-cs-visual::after { display: none; }
+      .al-cs-visual img { max-width: 320px; }
+      .al-cs-content {
+        padding: 0 24px 60px;
+        align-items: center;
+        text-align: center;
+        opacity: 1;
+        transform: none;
+      }
+      .al-cs-title { font-size: 56px; }
+      .al-cs-location { font-size: 20px; }
+      .al-cs-desc { font-size: 15px; max-width: 100%; }
+      .al-exp-hdr { padding: 18px 24px; }
       .al-slide { justify-content: center; }
       .al-slide-content { max-width: 100%; display: flex; flex-direction: column; align-items: center; text-align: center; }
       .al-title { font-size: 55px; line-height: 1; }
@@ -2389,6 +2706,8 @@
       .al-prev { left: 16px; }
       .al-next { right: 16px; }
       .al-dots { left: 50%; transform: translateX(-50%); bottom: 28px; }
+      .hero-exp-cards { width: 240px; }
+      .hero-exp-card { width: 240px; height: 148px; }
 
       /* ABOUT */
       .abt-spine { display: none; }

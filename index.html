@@ -8,6 +8,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700&family=Bebas+Neue&family=DM+Mono:ital,wght@0,400;0,500;1,400&family=Funnel+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+  <link rel="apple-touch-icon" href="webclip.png">
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
@@ -70,11 +72,49 @@
       <span class="tl"><span>Instituciones</span></span>
     </h1>
     <p class="hero-sub">
-      Conectamos atletas, marcas e instituciones, impulsando su crecimiento con representación, acuerdos comerciales y gestión de eventos.
+      Representación deportiva, acuerdos y gestión de eventos. Impulsamos crecimiento.
     </p>
     <div class="hero-ctas">
       <a href="#about" class="btn-primary">Nuestros Servicios</a>
       <a href="#talentos" class="btn-ghost">Ver Talentos</a>
+    </div>
+
+    <!-- Experience Thumbnails -->
+    <div class="hero-exp" aria-label="Experiencias destacadas">
+      <div class="hero-exp-label">Experiencias</div>
+      <div class="hero-exp-cards">
+        <div class="hero-exp-track" id="hero-exp-track">
+          <a href="#alianzas" class="hero-exp-card" style="background-image: url('messiexp-thumb.jpg'); background-position: left center;">
+            <div class="hero-exp-card-overlay"></div>
+            <div class="hero-exp-card-body">
+              <span class="hero-exp-card-tag">Experiencia</span>
+              <span class="hero-exp-card-name">The Messi<br>Experience</span>
+            </div>
+            <div class="hero-exp-card-arrow">↗</div>
+          </a>
+          <a href="#alianzas" class="hero-exp-card" style="background-image: url('3x3-thumb.jpg'); background-position: center center;">
+            <div class="hero-exp-card-overlay"></div>
+            <div class="hero-exp-card-body">
+              <span class="hero-exp-card-tag">Alianza</span>
+              <span class="hero-exp-card-name">Circuito<br>FIBA 3x3</span>
+            </div>
+            <div class="hero-exp-card-arrow">↗</div>
+          </a>
+          <a href="#alianzas" class="hero-exp-card hero-exp-card--soon" style="background-image: url('messiexp-thumb.jpg'); background-position: center top;">
+            <div class="hero-exp-card-overlay"></div>
+            <div class="hero-exp-card-body">
+              <span class="hero-exp-card-tag">Próximamente</span>
+              <span class="hero-exp-card-name">NJ · New York</span>
+            </div>
+            <div class="hero-exp-card-arrow">↗</div>
+          </a>
+        </div>
+      </div>
+      <div class="hero-exp-dots" id="hero-exp-dots">
+        <button class="hero-exp-dot active" aria-label="The Messi Experience"></button>
+        <button class="hero-exp-dot" aria-label="Circuito FIBA 3x3"></button>
+        <button class="hero-exp-dot" aria-label="Próximamente NJ · NY"></button>
+      </div>
     </div>
   </div>
 
@@ -438,49 +478,73 @@
 ══════════════════════════════════════════════════════════ -->
 <section id="alianzas">
 
-  <div class="al-track" id="al-track">
-
-    <!-- Slide 1: The Messi Experience -->
-    <div class="al-slide" style="
-      background: url('WEBSITE IMAGES/messi-experience.jpg') center/cover no-repeat;">
-      <div class="al-slide-overlay"></div>
-      <div class="al-slide-content">
-        <span class="al-tag">Alianzas con empresas</span>
-        <h2 class="al-title">The Messi<br>Experience</h2>
-        <p class="al-desc">Una experiencia única junto al más grande, para inspirar a la próxima generación de líderes deportivos.</p>
-        <a href="#" class="al-btn">Conocé la experiencia</a>
-      </div>
-      <div class="al-slide-wm">THE MESSI<br>EXPERIENCE</div>
+  <!-- COMING SOON: Messi Experience NJ/NY -->
+  <div class="al-cs">
+    <div class="al-cs-visual">
+      <img src="messi-nj.webp" alt="The Messi Experience — New York · New Jersey" draggable="false">
     </div>
-
-    <!-- Slide 2 -->
-    <div class="al-slide" style="
-      background: url('WEBSITE IMAGES/3x3.jpg') center/cover no-repeat;">
-      <div class="al-slide-overlay"></div>
-      <div class="al-slide-content">
-        <span class="al-tag">Alianzas con empresas</span>
-        <h2 class="al-title">Circuito<br>3x3</h2>
-        <p class="al-desc">Junto a FIBA y CAB, AONE se suma a este nuevo torneo federal que recorrerá el país durante 2025, llevando el básquet 3x3 a cada rincón de Argentina.</p>
-        <a href="#" class="al-btn">Conocé la alianza</a>
-      </div>
-      <div class="al-slide-wm">CIRCUITO<br>3X3</div>
+    <div class="al-cs-content" id="al-cs-content">
+      <span class="al-tag">Próximamente · 2026</span>
+      <h2 class="al-cs-title">The Messi<br>Experience</h2>
+      <div class="al-cs-location">New Jersey · New York</div>
+      <p class="al-cs-desc">La experiencia inmersiva de la vida y carrera de Leo Messi llega a Estados Unidos. Una nueva edición, un nuevo escenario.</p>
+      <a href="https://themessiexperience.com/new-york-new-jersey/es/" target="_blank" rel="noopener" class="al-btn">Enteráte primero</a>
     </div>
-
   </div>
 
-  <!-- Navigation arrows -->
-  <button class="al-arrow al-prev" id="al-prev" aria-label="Anterior">
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="15 18 9 12 15 6"/></svg>
-  </button>
-  <button class="al-arrow al-next" id="al-next" aria-label="Siguiente">
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="9 18 15 12 9 6"/></svg>
-  </button>
+  <!-- DIVIDER -->
+  <div class="al-exp-hdr">
+    <div class="al-exp-hdr-rule"></div>
+    <span class="al-exp-hdr-label">Experiencias realizadas</span>
+    <div class="al-exp-hdr-rule"></div>
+  </div>
 
-  <!-- Dots -->
-  <div class="al-dots" id="al-dots"></div>
+  <!-- EXISTING CAROUSEL -->
+  <div class="al-carousel" id="al-carousel">
 
-  <!-- Progress bar -->
-  <div class="al-progress" id="al-progress"><div class="al-progress-bar" id="al-progress-bar"></div></div>
+    <div class="al-track" id="al-track">
+
+      <!-- Slide 1: The Messi Experience -->
+      <div class="al-slide" style="background: url('WEBSITE IMAGES/messi-experience.jpg') center/cover no-repeat;">
+        <div class="al-slide-overlay"></div>
+        <div class="al-slide-content">
+          <span class="al-tag">Alianzas con empresas</span>
+          <h2 class="al-title">The Messi<br>Experience</h2>
+          <p class="al-desc">Una experiencia única junto al más grande, para inspirar a la próxima generación de líderes deportivos.</p>
+          <a href="#" class="al-btn">Conocé la experiencia</a>
+        </div>
+        <div class="al-slide-wm">THE MESSI<br>EXPERIENCE</div>
+      </div>
+
+      <!-- Slide 2 -->
+      <div class="al-slide" style="background: url('WEBSITE IMAGES/3x3.jpg') center/cover no-repeat;">
+        <div class="al-slide-overlay"></div>
+        <div class="al-slide-content">
+          <span class="al-tag">Alianzas con empresas</span>
+          <h2 class="al-title">Circuito<br>3x3</h2>
+          <p class="al-desc">Junto a FIBA y CAB, AONE se suma a este nuevo torneo federal que recorrerá el país durante 2025, llevando el básquet 3x3 a cada rincón de Argentina.</p>
+          <a href="#" class="al-btn">Conocé la alianza</a>
+        </div>
+        <div class="al-slide-wm">CIRCUITO<br>3X3</div>
+      </div>
+
+    </div>
+
+    <!-- Navigation arrows -->
+    <button class="al-arrow al-prev" id="al-prev" aria-label="Anterior">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="15 18 9 12 15 6"/></svg>
+    </button>
+    <button class="al-arrow al-next" id="al-next" aria-label="Siguiente">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="9 18 15 12 9 6"/></svg>
+    </button>
+
+    <!-- Dots -->
+    <div class="al-dots" id="al-dots"></div>
+
+    <!-- Progress bar -->
+    <div class="al-progress" id="al-progress"><div class="al-progress-bar" id="al-progress-bar"></div></div>
+
+  </div><!-- /al-carousel -->
 
 </section>
 
