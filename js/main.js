@@ -294,8 +294,7 @@ document.addEventListener('keydown', e => {
   const track = document.getElementById('mq-track');
   if (!track) return;
   const BRANDS = [
-    'The Messi Experience', '✦', 'Sport Summit', '✦',
-    'Elite Training Camp', '✦', 'Aone Agency', '✦',
+    'Be The One', '✦', 'Be The One', '✦', 'Be The One', '✦', 'Be The One', '✦',
   ];
   // Duplicate for seamless loop
   const all = [...BRANDS, ...BRANDS];
@@ -443,26 +442,6 @@ new IntersectionObserver(entries => {
   startTimer();
 })();
 
-/* ══════════════════════════════════════════════════════════
-   HERO THUMBNAILS — MINI CAROUSEL (2 visible of 3)
-══════════════════════════════════════════════════════════ */
-(function() {
-  const expTrack = document.getElementById('hero-exp-track');
-  const dots     = document.querySelectorAll('#hero-exp-dots .hero-exp-dot');
-  if (!expTrack || !dots.length) return;
-
-  let activePage = 0;
-
-  function goTo(page) {
-    activePage = page;
-    const card   = expTrack.querySelector('.hero-exp-card');
-    const cardW  = card ? card.offsetWidth + 10 : 250;
-    expTrack.style.transform = `translateX(-${page * cardW}px)`;
-    dots.forEach((d, i) => d.classList.toggle('active', i === page));
-  }
-
-  dots.forEach((dot, i) => dot.addEventListener('click', () => goTo(i)));
-})();
 
 /* ══════════════════════════════════════════════════════════
    ALIANZAS — COMING SOON SCROLL ANIMATION
