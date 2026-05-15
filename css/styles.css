@@ -2812,6 +2812,21 @@
       .modal-close { top: 12px; right: 12px; }
     }
 
+    /* ── DESKTOP: fill full width with grid when cards fit ── */
+    @media (min-width: 1025px) {
+      .track {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        overflow-x: hidden;
+        cursor: default;
+      }
+      .track:active { cursor: default; }
+      .card { height: 420px; }
+      .track-nav,
+      .track-progress,
+      .scroll-hint { display: none; }
+    }
+
     /* ── TOUCH DEVICES: replace 3D flip with fade ── */
     @media (hover: none) {
       .acard-inner {
