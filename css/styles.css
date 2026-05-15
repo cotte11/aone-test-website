@@ -334,7 +334,7 @@
     .hero-title .tl:nth-child(3) span { animation-delay: .72s; }
 
     .hero-sub {
-      font-size: clamp(14px, 1.4vw, 17px);
+      font-size: clamp(16px, 1.6vw, 20px);
       font-weight: 300;
       line-height: 1.65;
       color: rgba(255,255,255,.68);
