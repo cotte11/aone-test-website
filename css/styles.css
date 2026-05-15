@@ -823,7 +823,7 @@
     }
 
     .abt-body-p {
-      font-size: 16px;
+      font-size: 18px;
       font-weight: 300;
       line-height: 1.78;
       color: rgba(255,255,255,.4);
@@ -1059,7 +1059,7 @@
     }
     .hdr-desc {
       max-width: 360px;
-      font-size: 14px;
+      font-size: 16px;
       font-weight: 300;
       line-height: 1.65;
       color: var(--muted);
@@ -1689,7 +1689,7 @@
     }
 
     .al-cs-desc {
-      font-size: 15px;
+      font-size: 17px;
       font-weight: 300;
       line-height: 1.68;
       color: rgba(255,255,255,.6);
@@ -1813,7 +1813,7 @@
     }
 
     .al-desc {
-      font-size: 15px;
+      font-size: 17px;
       font-weight: 300;
       line-height: 1.68;
       color: rgba(255,255,255,.62);
@@ -1994,7 +1994,7 @@
       color: var(--neon);
     }
     .cta-body {
-      font-size: 15px;
+      font-size: 17px;
       font-weight: 300;
       line-height: 1.7;
       color: rgba(255,255,255,.62);
@@ -2222,7 +2222,7 @@
     .areas-hdr-right.on { opacity: 1; transform: none; }
 
     .areas-hdr-desc {
-      font-size: 16px;
+      font-size: 18px;
       font-weight: 300;
       line-height: 1.72;
       color: rgba(255, 255, 255, 0.801);
