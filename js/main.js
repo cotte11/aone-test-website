@@ -50,17 +50,16 @@ document.querySelectorAll('.card').forEach((card, i) => {
 /* ══════════════════════════════════════════════════════════
    TALENTOS — TITLE BUILD
 ══════════════════════════════════════════════════════════ */
-const T_WORDS = ['ALGUNOS DE', 'NUESTROS', 'TALENTOS'];
-['t-line1','t-line2','t-line3'].forEach((id, wi) => {
-  const el = document.getElementById(id);
-  T_WORDS[wi].split('').forEach((ch, li) => {
-    const s = document.createElement('span');
-    s.textContent = ch === ' ' ? '\u00A0' : ch;
-    s.style.transitionDelay = `${(wi * T_WORDS[0].length + li) * 32}ms`;
-    el.appendChild(s);
+const T_WORDS = ['ALGUNOS DE NUESTROS TALENTOS'];
+  ['t-line1'].forEach((id, wi) => {
+    const el = document.getElementById(id);
+    T_WORDS[wi].split('').forEach((ch, li) => {
+      const s = document.createElement('span');
+      s.textContent = ch === ' ' ? '\u00A0' : ch;
+      s.style.transitionDelay = `${li * 28}ms`;
+      el.appendChild(s);
+    });
   });
-});
-
 /* ══════════════════════════════════════════════════════════
    COUNTER
 ══════════════════════════════════════════════════════════ */
@@ -117,56 +116,13 @@ new IntersectionObserver(entries => {
   if (!entries[0].isIntersecting || talFired) return;
   talFired = true;
   d(() => document.getElementById('t-lbl').classList.add('on'), 80);
-  d(() => document.querySelectorAll('#t-line1 span, #t-line2 span, #t-line3 span').forEach(s => s.classList.add('on')), 200);
+  d(() => document.querySelectorAll('#t-line1 span').forEach(s => s.classList.add('on')), 200);
   d(() => document.getElementById('t-desc').classList.add('on'), 360);
   d(() => document.getElementById('t-stats').classList.add('on'), 420);
-  d(() => document.getElementById('t-rule').classList.add('on'), 500);
   document.querySelectorAll('.card').forEach((c, i) =>
-    d(() => c.classList.add('on'), 580 + i * 85)
+    d(() => c.classList.add('on'), 560 + i * 80)
   );
-  d(() => document.getElementById('t-bbar').classList.add('on'), 780);
-  d(() => document.getElementById('track-nav').classList.add('on'), 500);
-  d(() => {
-    document.querySelectorAll('.stat-n[data-to]').forEach(el => counter(el, +el.dataset.to));
-  }, 460);
 }, { threshold: 0.08 }).observe(document.getElementById('talentos'));
-
-/* ══════════════════════════════════════════════════════════
-   DRAG TO SCROLL
-══════════════════════════════════════════════════════════ */
-const track = document.getElementById('track');
-let drag = false, startX, sl, didDrag = false;
-track.addEventListener('mousedown', e => { drag=true; didDrag=false; startX=e.pageX-track.offsetLeft; sl=track.scrollLeft; });
-track.addEventListener('mousemove', e => { if(!drag)return; didDrag=true; track.scrollLeft=sl-(e.pageX-track.offsetLeft-startX)*1.4; });
-['mouseup','mouseleave'].forEach(ev => track.addEventListener(ev, () => drag=false));
-
-/* ══════════════════════════════════════════════════════════
-   TRACK — ARROWS + PROGRESS
-══════════════════════════════════════════════════════════ */
-(function() {
-  const trackEl   = document.getElementById('track');
-  const prevBtn   = document.getElementById('track-prev');
-  const nextBtn   = document.getElementById('track-next');
-  const fill      = document.getElementById('track-progress-fill');
-  const CARD_W    = 255 + 14; // card width + gap
-
-  function scrollBy(dir) {
-    trackEl.scrollBy({ left: dir * CARD_W * 2, behavior: 'smooth' });
-  }
-
-  function updateUI() {
-    const max = trackEl.scrollWidth - trackEl.clientWidth;
-    const pct = max > 0 ? (trackEl.scrollLeft / max) * 100 : 0;
-    fill.style.width = pct + '%';
-    prevBtn.disabled = trackEl.scrollLeft <= 0;
-    nextBtn.disabled = trackEl.scrollLeft >= max - 1;
-  }
-
-  prevBtn.addEventListener('click', () => scrollBy(-1));
-  nextBtn.addEventListener('click', () => scrollBy(1));
-  trackEl.addEventListener('scroll', updateUI, { passive: true });
-  updateUI();
-})();
 
 /* ══════════════════════════════════════════════════════════
    MODAL
@@ -260,20 +216,17 @@ document.getElementById('modal-next').addEventListener('click', () => navigate(1
   new IntersectionObserver(entries => {
     if (!entries[0].isIntersecting || areasFired) return;
     areasFired = true;
-    d(() => document.getElementById('areas-hdr-rule').classList.add('on'), 0);
-    d(() => document.getElementById('areas-hdr-label').classList.add('on'), 120);
-    d(() => document.querySelectorAll('.areas-hdr-title .ahl span').forEach(el => el.classList.add('on')), 200);
-    d(() => document.getElementById('areas-hdr-right').classList.add('on'), 300);
-    d(() => document.getElementById('areas-hdr-bottom-rule').classList.add('on'), 450);
+    d(() => document.getElementById('areas-hdr-label').classList.add('on'), 80);
+    d(() => document.getElementById('areas-hdr-title').classList.add('on'), 180);
+    d(() => document.getElementById('areas-hdr-desc').classList.add('on'), 260);
     document.querySelectorAll('.acard').forEach((c, i) =>
-      d(() => c.classList.add('on'), 560 + i * 100)
+      d(() => c.classList.add('on'), 380 + i * 110)
     );
   }, { threshold: 0.1 }).observe(document.getElementById('areas'));
 
   // Touch / click flip for mobile
   document.querySelectorAll('.acard').forEach(card => {
     card.addEventListener('click', () => {
-      // Only toggle on mobile (touch) — hover handles desktop
       if (window.matchMedia('(hover: none)').matches) {
         card.classList.toggle('flipped');
       }
@@ -287,30 +240,6 @@ document.addEventListener('keydown', e => {
   if (e.key === 'ArrowLeft')  navigate(-1);
 });
 
-/* ══════════════════════════════════════════════════════════
-   MARQUEE — BUILD TRACK
-══════════════════════════════════════════════════════════ */
-(function() {
-  const track = document.getElementById('mq-track');
-  if (!track) return;
-  const BRANDS = [
-    'Be The One', '✦', 'Be The One', '✦', 'Be The One', '✦', 'Be The One', '✦',
-  ];
-  // Duplicate for seamless loop
-  const all = [...BRANDS, ...BRANDS];
-  all.forEach(name => {
-    const item = document.createElement('span');
-    item.className = 'mq-item';
-    if (name === '✦') {
-      item.style.cssText = 'font-size:14px;padding:0 20px;';
-      item.textContent = '✦';
-    } else {
-      item.style.cssText = 'font-family:"Funnel Sans",sans-serif;font-size:13px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;padding:0 40px;';
-      item.textContent = name;
-    }
-    track.appendChild(item);
-  });
-})();
 
 /* ══════════════════════════════════════════════════════════
    ABOUT — PARALLAX BACKGROUND
