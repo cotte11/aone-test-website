@@ -86,6 +86,15 @@
     }
     @keyframes lineGrow { to { height: 65%; } }
 
+    /* 1440px CONTENT FRAME — hero content wrapper */
+    .hero-frame {
+      position: absolute;
+      top: 0; bottom: 0; left: 0; right: 0;
+      max-width: 1440px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
     /* NAVBAR */
     .nav {
       position: absolute;
@@ -757,6 +766,9 @@
       position: relative;
       z-index: 6;
       padding: 0 64px 0 92px;
+      max-width: 1440px;
+      margin-left: auto;
+      margin-right: auto;
     }
 
     .abt-label {
@@ -1047,6 +1059,9 @@
       align-items: flex-end;
       justify-content: space-between;
       gap: 48px;
+      max-width: 1440px;
+      margin-left: auto;
+      margin-right: auto;
     }
     .tal-banner-left { flex: 1; min-width: 0; }
     .tal-banner-right { flex-shrink: 0; }
@@ -1057,6 +1072,9 @@
     grid-template-columns: repeat(3, 1fr);
     gap: 30px;
     padding: 16px 64px 80px;
+    max-width: 1440px;
+    margin-left: auto;
+    margin-right: auto;
   }
 
     /* Header (reused inside banner) */
@@ -1663,6 +1681,9 @@
       min-height: 100vh;
       background: #060606;
       overflow: hidden;
+      max-width: 1440px;
+      margin-left: auto;
+      margin-right: auto;
     }
 
     /* LEFT — visual */
@@ -2099,7 +2120,6 @@
         radial-gradient(ellipse 50% 70% at 100% 0%, rgba(0,8,25,.4), transparent),
         linear-gradient(to bottom, #07090a 0%, #060606 40%);
       border-top: 1px solid var(--border);
-      padding: 72px 80px 0;
       overflow: hidden;
       position: relative;
     }
@@ -2115,6 +2135,11 @@
       background-repeat: repeat;
     }
     #footer > * { position: relative; z-index: 1; }
+    .footer-inner {
+      max-width: 1440px;
+      margin: 0 auto;
+      padding: 72px 80px 0;
+    }
     .footer-top {
       display: flex;
       justify-content: space-between;
@@ -2213,6 +2238,9 @@
       padding: 0 64px 60px;
       position: relative;
       z-index: 1;
+      max-width: 1440px;
+      margin-left: auto;
+      margin-right: auto;
     }
 
     .areas-hdr-label {
@@ -2260,12 +2288,15 @@
       grid-template-columns: repeat(4, 1fr);
       gap: 14px;
       padding: 0 64px 96px;
+      max-width: 1440px;
+      margin-left: auto;
+      margin-right: auto;
     }
 
     /* ── FLIP PHOTO CARD ── */
     .acard {
       position: relative;
-      height: 440px;
+      height: 500px;
       border-radius: 10px;
       perspective: 1200px;
       cursor: pointer;
@@ -2403,6 +2434,7 @@
       padding: 30px;
       display: flex;
       flex-direction: column;
+      overflow: hidden;
     }
     .b1 { background: linear-gradient(160deg, #0f1f0f 0%, #060606 100%); border-top: 2px solid var(--neon); }
     .b2 { background: linear-gradient(160deg, #0d1020 0%, #060606 100%); border-top: 2px solid #4488ff; }
@@ -2517,7 +2549,7 @@
       /* AREAS */
       .areas-header { padding: 0 36px 48px; }
       .areas-grid { grid-template-columns: repeat(2, 1fr); padding: 0 36px 72px; }
-      .acard { height: 400px; }
+      .acard { height: 440px; }
 
       /* TALENTOS */
       .tal-banner-inner { padding: 64px 36px 36px; }
@@ -2535,7 +2567,7 @@
       .cta-inner { padding: 80px 56px; }
 
       /* FOOTER */
-      #footer { padding: 56px 36px 0; }
+      .footer-inner { padding: 56px 36px 0; }
 
       /* MODAL */
       .modal { max-width: 780px; }
@@ -2551,9 +2583,9 @@
       section,
       .areas-header, .areas-grid,
       .abt-inner,
+      .footer-inner,
       .al-slide-content,
-      .cta-inner,
-      #footer {
+      .cta-inner {
         padding-left: 20px;
         padding-right: 20px;
       }
@@ -2731,7 +2763,7 @@
       .cta-title { font-size: 48px; }
 
       /* FOOTER */
-      #footer { padding-top: 48px; padding-bottom: 0; }
+      .footer-inner { padding-top: 48px; padding-bottom: 0; }
       .footer-top { flex-direction: column; align-items: center; gap: 40px; }
       .footer-cols { flex-direction: column; gap: 28px; }
       .footer-col { text-align: center; }
